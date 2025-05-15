@@ -33,7 +33,7 @@ $(function () {
         $(".active").removeClass("active");
         $(this).addClass("active");
         const index = tabs.index(this);
-        $(".panel-list").removeClass("show").eq(index).addClass("show");
+        $(".panel-content").removeClass("show").eq(index).addClass("show");
     });
 });
 

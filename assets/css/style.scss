@@ -27,11 +27,556 @@ img{
     display: none;
 
 }
+.c-hover{
+    transition: .2s;
+
+    &:hover{
+        filter: opacity(40%);
+    }
+}
+
 .pinkTxt{
     color: var(--textPink)!important;
 }
 .blueTxt{
     color: var(--textBlue)!important;
+}
+.dotBobder{
+    border-bottom: 4px dotted var(--textColor);
+    padding-bottom: 15px;
+}
+.ttl-wrap{
+    margin: 0 auto 30px;
+    text-align: center;
+
+}
+.fukidashiTtl{
+    .fukidashi{
+        font-size: 18px;
+        background-color: #FFCEC9;
+        padding: 5px 20px;
+        border-radius: 30px;
+        position: relative;
+
+        &::before{
+            content: '';
+            background: url(../media/images/tabFukidashi01.png) no-repeat;
+            background-size: contain;
+            width: 32px;
+            height: 14px;
+            position: absolute;
+            bottom: -14px;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+    }
+    h2{
+        margin-top: 30px;
+    }
+}
+.num{
+    color: var(--textPink);
+    display: inline-block;
+    margin-right: 5px;
+}
+
+h2{
+    font-size: 32px;
+    font-weight: bold;
+
+    .strong{
+        font-size: 38px;
+    }
+}
+
+header{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 24px 32px 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+
+    .header-logo{
+        width: 201px;
+        height: 62px;
+        display: block;
+    }
+
+}
+.fv{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    &::before{
+        content: '';
+        background: url(../media/images/fv-pcImg.png);
+        width: 50%;
+        height: 100%;
+        background-size: cover;
+        background-position: center right;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 0 0 0 80px;
+    }
+}
+.lp-title-area{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lp-titleWrap{
+    color: var(--textPink);
+    text-align: center;
+
+    h1{
+        font-size: 48px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        line-height: 1.5;
+        letter-spacing: 4px;
+    }
+    .sab-ttl{
+        margin-bottom: 25px;
+    }
+    .smile-logo{
+        width: 120px;
+        height: 15px;
+        margin: 0 auto;
+    }
+}
+
+.containerWrap{
+    padding: 40px;
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.tab-item-wrap{
+    max-width: 1120px;
+    margin: 30px auto 60px;
+    display: flex;
+    justify-content: space-between;
+
+    .tab-item{
+        width: 23.92%;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0;
+        border-radius: 5px;
+        position: relative;
+        cursor: pointer;
+
+        .inner{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+
+        p{
+            font-size: 20px;
+            text-align: center;
+            line-height: 1.2;
+        }
+        span{
+            font-size: 15px;
+        }
+        .tabArw{
+            width: 24px;
+            height: 24px;
+            position: relative;
+
+            img{
+                &:last-child{
+                    display: none;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+            }
+        }
+    }
+}
+.tab-item01{
+    background-image: linear-gradient(to right, #FFBDB6, #FC9990);
+
+    &::before{
+        content: '';
+        background: url(../media/images/tabFukidashi01.png) no-repeat;
+        background-size: contain;
+        width: 32px;
+        height: 14px;
+        bottom: -13px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+    }
+}
+
+.tab-item02{
+    background-image: linear-gradient(to right, #71D0DD, #30BBDA);
+
+    &::before{
+        content: '';
+        background: url(../media/images/tabFukidashi02.png) no-repeat;
+        background-size: contain;
+        width: 32px;
+        height: 14px;
+        bottom: -13px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+    }
+}
+.tab-item03{
+    background-image: linear-gradient(to right, #71D0DD, #30BBDA);
+
+    &::before{
+        content: '';
+        background: url(../media/images/tabFukidashi02.png) no-repeat;
+        background-size: contain;
+        width: 32px;
+        height: 14px;
+        bottom: -13px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+    }
+}
+.tab-item04{
+    background-image: linear-gradient(to right, #D8BA88, #DAAA54);
+
+    &::before{
+        content: '';
+        background: url(../media/images/tabFukidashi04.png) no-repeat;
+        background-size: contain;
+        width: 32px;
+        height: 14px;
+        bottom: -13px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+    }
+}
+//共通コンテンツ
+.commonContent-block{
+    padding: 70px 0;
+}
+.graph-block{
+    max-width: 850px;
+    margin: 0 auto 70px;
+    display: flex;
+    justify-content: space-between;
+
+    .graph-area{
+        width: 50.11%;
+    }
+    .graph-detail-area{
+        width: 44.23%;
+
+        .tableWrap{
+            display: flex;
+            gap: 50px;
+            padding-left: 20px;
+            margin-top: 20px;
+
+            table{
+                border-spacing: 0 20px; /* 横 縦 の順で間隔を指定 */
+                border-collapse: separate; /* これが重要 */
+
+                td:first-child{
+                    padding-right: 10px;
+                }
+
+            }
+        }
+    }
+    .noteTxt{
+        font-size: 12px;
+    }
+}
+.feature-block{
+    margin-bottom: 70px;
+    position: relative;
+    &::before{
+        content: '';
+        background: url(../media/images/c-content_person01.png) no-repeat;
+        background-size: contain;
+        width: 322px;
+        height: 182px;
+        position: absolute;
+        top: -63px;
+        right: 0;
+    }
+}
+.feature-item-wrap{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 10px;
+    column-gap: 10px;
+}
+.feature-item{
+    border: 5px solid #FFEFEC;
+    background-color: #FFFAF9;
+    padding: 25px 40px;
+    border-radius: 20px;
+    position: relative;
+
+    &::before{
+        content: '';
+        background: url(../media/images/memphis-pink.png) no-repeat;
+        background-size: contain;
+        width: 72px;
+        height: 75px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    dt{
+        font-size: 20px;
+        border-bottom: 1px solid #D1CDC6;
+        padding-bottom: 15px;
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 2;
+
+        span{
+            color: var(--textPink);
+        }
+    }
+    dd{
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+
+        .img-area{
+            width: 35.59%;
+        }
+        .txt-area{
+            width: 61.01%;
+        }
+    }
+}
+.price-block{
+    margin-bottom: 70px;
+    .ttl-wrap{
+        width: 376px;
+    }
+    .noteTxt{
+        color: var(--textPink);
+    }
+}
+.price-table-wrap{
+    p{
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 10px;
+
+        &::before{
+            content: "";
+            width: 18px;
+            height: 18px;
+            background: var(--textBlue);
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            left: 0;
+        }
+    }
+    ul{
+        display: flex;
+        padding: 0 45px;
+        background-color: var(--textBlue);
+
+
+        li{
+            padding: 15px 0;
+            color: #ffffff;
+
+            &:first-of-type{
+                width: 77.67%;
+                text-align: center;
+                letter-spacing: 16px;
+            }
+            &:last-of-type{
+                width: 22.32%;
+                text-align: center;
+            }
+        }
+    }
+    .price-table{
+        background-color: #ffffff;
+        padding: 30px 45px 35px;
+
+        dl{
+            border-bottom: 2px dashed #D1CDC6;
+            padding: 10px 0;
+            display: flex;
+
+            &:first-of-type{
+                padding-top: 0px;
+            }
+            &:last-of-type{
+                padding-bottom: 0px;
+                border-bottom: none;
+            }
+            dt{
+                width: 77.67%;
+                line-height: 1.5;
+            }
+            dd{
+                width: 22.32%;
+                text-align: center;
+                line-height: 1.5;
+            }
+
+        }
+    }
+}
+
+//コンタクトボタン
+.contact-btn-wrap{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+
+    a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 250px;
+        position: relative;
+        border-radius: 10px;
+        padding: 10px 0;
+
+        span{
+            position: relative;
+            line-height: 1.3;
+        }
+    }
+    .tel-btn{
+        background-color: #CEAF78;
+        color: #ffffff;
+        font-size: 22px;
+        transition: .3s all;
+
+        &::before{
+            content: '';
+            background: url(../media/images/c-telArw.png);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            height: 6px;
+            width: 26px;
+            bottom: 10px;
+            right: 10px;
+            position: absolute;
+        }
+
+        span{
+            padding: 12px 0px 12px 45px;
+            letter-spacing: 2px;
+
+            &::before{
+                content: '';
+                background: url(../media/images/tel-icon.png);
+                background-size: contain;
+                height: 36px;
+                width: 36px;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                margin: auto;
+                position: absolute;
+                transition: .3s;
+            }
+
+        }
+
+        &:hover{
+            color: #CEAF78;
+            background-color: #ffffff;
+            span{
+                &::before{
+                    background: url(../media/images/tel-icon_h.png);
+                    background-size: contain;
+                }
+            }
+        }
+
+    }
+    .line-btn{
+        background-color: #4CC755;
+        color: #ffffff;
+        font-size: 18px;
+        transition: .3s all;
+
+        span{
+            padding: 12px 0px 12px 50px;
+
+            &::before{
+                content: '';
+                background: url(../media/images/line-icon.png);
+                background-size: contain;
+                height: 32px;
+                width: 42px;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                margin: auto;
+                position: absolute;
+                transition: .3s;
+            }
+        }
+
+        &:hover{
+            color: #4CC755;
+            background-color: #ffffff;
+            span{
+                &::before{
+                    background: url(../media/images/line-icon_h.png);
+                    background-size: contain;
+                }
+            }
+        }
+
+    }
+}
+
+.menu-contact-block{
+    background-color: #FFF4F2;
+    border-radius: 15px;
+    padding: 45px 20px;
+    text-align: center;
+    p{
+        &:first-of-type{
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            span{
+                color: #F8887D;
+            }
+        }
+    }
 }
 
 // Footer Styles
@@ -59,203 +604,6 @@ img{
     }
 }
 
-#visualVerticalImg {
-    width: 200%;
-}
-
-.footer-contact {
-    padding: 0 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-    margin-top: -50px;
-    position: relative;
-    z-index: 4;
-
-    .inner{
-        background-color: #32AAC1;
-        padding: 40px 70px;
-        display: flex;
-        gap: 30px;
-        justify-content: space-between;
-        align-items: center;
-        border-radius: 10px;
-
-        .txt-area{
-            color: #ffffff;
-
-            p{
-                &:first-child{
-                    font-size: 28px;
-                    font-weight: bold;
-                    letter-spacing: 2.5px;
-                    margin-bottom: 10px;
-                }
-
-                &:last-child{
-                    font-size: 15px;
-                }
-            }
-        }
-
-        .contact-area{
-            width: calc(100% - 396px);
-            .wrapper{
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-
-                a{
-                    text-align: center;
-                    transition: .2s all;
-                    position: relative;
-
-                    &:nth-child(1){
-                        background-color: #ffffff;
-                        padding: 35px 17px;
-                        border-radius: 10px 0 0 10px;
-
-                        &::before{
-                            content: '';
-                            background-image: url(../media/top_images/arw-line-b.png);
-                            background-size: contain;
-                            background-repeat: no-repeat;
-                            width: 26px;
-                            height: 6px;
-                            bottom: 7px;
-                            right: 5px;
-                            position: absolute;
-                        }
-        
-                        span{
-                            color: #CEAF78;
-                            font-size: 22px;
-                            position: relative;
-                            font-weight: bold;
-                            padding-left: 45px;
-                            letter-spacing: 1.5px;
-        
-                            &::before{
-                                content: '';
-                                background-image: url(../media/top_images/tel-circle.png);
-                                background-size: contain;
-                                background-repeat: no-repeat;
-                                width: 36px;
-                                height: 36px;
-                                top: 0;
-                                left: 0;
-                                position: absolute;
-                            }
-                        }
-        
-                        &:hover{
-                            background-color: #CEAF78;
-        
-                            span{
-                                color: #ffffff;
-        
-                                &::before{
-                                    background-image: url(../media/top_images/tel-circle-w.png);
-                                    background-size: contain;
-                                    background-repeat: no-repeat;
-                                }
-                            }
-                        }
-                    }
-
-                    &:nth-child(2){
-                        background-color: #4CC755;
-                        position: relative;
-                        padding: 35px 17px;
-                        border-radius: 0 10px 10px 0;
-        
-                        span{
-                            color: #ffffff;
-                            font-size: 20px;
-                            position: relative;
-                            font-weight: bold;
-                            padding-left: 45px;
-                            letter-spacing: 1.5px;
-        
-                            &::before{
-                                content: '';
-                                background-image: url(../media/images/line-fukidashi.png);
-                                background-size: contain;
-                                background-repeat: no-repeat;
-                                width: 40px;
-                                height: 32px;
-                                top: -2px;
-                                left: -3px;
-                                position: absolute;
-                            }
-                        }
-        
-                        &:hover{
-                            background-image: none;
-                            background-color: #ffffff;
-        
-                            span{
-                                color: #4CC755;
-        
-                                &::before{
-                                    background-image: url(../media/images/line-fukidashi-g.png);
-                                    background-size: contain;
-                                    background-repeat: no-repeat;
-                                }
-                            }
-                        }
-                    }
-
-                    &:nth-child(3){
-                        background-color: #4CC755;
-                        position: relative;
-                        padding: 46px 8px 0px 8px;
-                        border-radius: 0 10px 10px 0;
-        
-                        span{
-                            color: #ffffff;
-                            font-size: 14px;
-                            font-weight: bold;
-                            position: relative;
-
-                            &::before{
-                                content: '';
-                                background-image: url(../media/top_images/line_fukidashi-w.png);
-                                background-size: contain;
-                                background-repeat: no-repeat;
-                                width: 40px;
-                                height: 31px;
-                                top: -32px;
-                                left: 0;
-                                right: 0;
-                                margin: auto 0;
-                                position: absolute;
-                            }
-                        }
-        
-                        &:hover{
-                            background-color: #ffffff;
-        
-                            span{
-                                color: #4CC755;
-
-                                &::before{
-                                    content: '';
-                                    background-image: url(../media/top_images/line-fukidashi-g.png);
-                                    background-size: contain;
-                                    background-repeat: no-repeat;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-.footer-begin{
-    height: 96px;
-}
-
 .footer-menu-area{
     background-image: linear-gradient(to right,#5DC1CF, #49B3CB);
     padding: 270px 100px 200px;
@@ -263,9 +611,28 @@ img{
     position: relative;
     z-index: 2;
 
+}
+.footerContent-wrap{
+    max-width: 1064px;
+    margin: 0 auto;
+}
+
+.footer-nav-wrap{
     nav{
-        display: flex;
-        justify-content: space-between;
+        border-bottom: 1px solid #fff;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        padding: 20px 0;
+
+        &:last-child{
+            border-bottom: none;
+        }
+        &:nth-of-type(2){
+            .menu-ttl{
+                margin-bottom: 15px;
+            }
+        }
 
         li,a{
             color: #ffffff;
@@ -281,158 +648,86 @@ img{
         }
 
         .menu-ttl{
-            font-size: 16px;
-
             a{
-                padding-left: 12px;
+                padding-left: 15px;
+                font-size: 16px;
                 position: relative;
+                margin-bottom: 35px;
 
                 &::before{
-                    content: '';
-                    background: url(../media/top_images/innercircle-w.png);
-                    width: 8px;
-                    height: 8px;
+                    content: '◎';
+                    color: #fff;
+                    font-size: 10px;
                     background-size: contain;
-                    top: 0;
+                    top: 9px;
                     left: 0;
-                    bottom: 0;
-                    margin: auto;
                     position: absolute;
+                }
+            }
+        }
+        .detail-menu{
+            li{
+                margin-bottom: 10px;
+                padding-left: 15px;
+        
+                &:last-child{
+                    margin-bottom: 15px;
+                }
+        
+                a{
+                    font-size: 14px;
                 }
             }
         }
     }
 }
-
-.detail-menu{
-    li{
-        margin-bottom: 10px;
-        padding-left: 10px;
-
-        &:last-child{
-            margin-bottom: 15px;
-        }
-
-        a{
-            font-size: 14px;
-        }
-    }
-}
-
-.menu-about{
-    width: 23.51%;
-
-    .has-menu{
-        margin: 15px 0;
-    }
-
-    .menu-ttl{
-        &:first-of-type{
-            padding-bottom: 15px;
-            border-bottom: 1px solid #ffffff;
-        }
-
-        &:last-of-type{
-            padding-top: 15px;
-            border-top: 1px solid #ffffff;
-        }
-    }
-}
-
-.medicalMenu-item{
-    .medicalMenu-ttl{
-        display: inline-block;
-        padding-right: 8px;
-        padding-left: 10px;
-        position: relative;
-        z-index: 2;
-
-        &::before{
-            content: '';
-            background: url(../media/top_images/ring_icon.png);
-            width: 4px;
-            height: 4px;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            margin: auto;
-            background-size: contain;
-            position: absolute;
-        }
-    }
-}
-
-.medicalMenu-wrapper{
+.footer-contact-wrap{
     display: flex;
-    gap: 15px;
+    justify-content: space-between;
+    margin-top: 50px;
+    gap: 30px;
 
-    .itemWrap01{
-        width: 50%;
+    .mainSite-bnr{
+        width: 30.73%;
+    }
+    .footer-contact-bnr{
+        width: 67.38%;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        background: #32AAC1;
+        border-radius: 10px;
+        padding: 30px 35px;
+        div{
+            &:first-child{
+                color: #fff;
 
-        .medicalMenu-ttl{
-            &:nth-of-type(1){
-                background-color: #56BCCE;
+                p{
+                    font-size: 20px;
+                    text-align: center;
+                }
+                span{
+                    font-size: 14px;
+                    text-align: center;
+                }
             }
         }
-    }
-    .itemWrap02{
-        width: 50%;
 
-        .medicalMenu-ttl{
-            &:nth-of-type(1){
-                background-color: #52B9CD;
+        .contact-btn-wrap{
+            margin-top: 0px;
+            a{
+                max-width: 180px;
+                span{
+                    font-size: 16px;
+                }
             }
-
-            &:nth-of-type(2){
-                background-color: #53BACD;
-            }
-
-            &:nth-of-type(3){
-                background-color: #52B9CD;
-            }
-        }
-    }
-}
-
-.menu-treatment{
-    width: 47.03%;
-
-    .menu-ttl{
-        margin-bottom: 15px;
-    }
-}
-
-.ttl-line{
-    display: block;
-    transform: translateY(-16px);
-    position: relative;
-    z-index: 1;
-
-    &::before{
-        content: '';
-        width: 100%;
-        height: 1px;
-        background-color: #ffffff;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-    }
-}
-
-.menu-others{
-    width: 23.51%;
-
-    .menu-ttl{
-        margin-bottom: 15px;
-
-        &:nth-of-type(2){
-            border-top: 1px solid #ffffff;
-            border-bottom: 1px solid #ffffff;
-            padding: 15px 0;
+            
         }
     }
 }
+
+
+
 
 .footer-access-area {
     display: flex;
