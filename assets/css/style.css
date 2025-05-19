@@ -724,7 +724,7 @@ header .header-logo {
 .recomend-block {
   background: #fff;
   box-shadow: 20px 20px 20px 0px rgba(104, 82, 78, 0.1176470588);
-  padding: 32px 50px;
+  padding: 32px 50px 40px;
   max-width: 944px;
   margin: 0 auto;
   border-radius: 20px;
@@ -1350,7 +1350,7 @@ small {
   }
   .lp-titleWrap {
     background: rgba(255, 255, 255, 0.88);
-    padding: 30px;
+    padding: 30px 20px;
     border-radius: 20px;
   }
   .lp-titleWrap h1 {
