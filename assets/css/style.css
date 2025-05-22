@@ -45,11 +45,18 @@ img {
 }
 
 .dotsTxt {
-  background-image: radial-gradient(circle at center, var(--textPink) 20%, transparent 20%);
   background-position: top right;
   background-repeat: repeat-x;
   background-size: 1em 0.2em;
   padding-top: 0.2em;
+}
+
+.pinkDotsTxt {
+  background-image: radial-gradient(circle at center, var(--textPink) 20%, transparent 20%);
+}
+
+.blueDotsTxt {
+  background-image: radial-gradient(circle at center, var(--textBlue) 20%, transparent 20%);
 }
 
 .pinkTxt {
@@ -72,22 +79,9 @@ img {
 
 .fukidashiTtl .fukidashi {
   font-size: 18px;
-  background-color: #FFCEC9;
   padding: 5px 20px;
   border-radius: 30px;
   position: relative;
-}
-.fukidashiTtl .fukidashi::before {
-  content: "";
-  background: url(../media/images/ttl_fukidashi.png) no-repeat;
-  background-size: contain;
-  width: 32px;
-  height: 14px;
-  position: absolute;
-  bottom: -14px;
-  left: 0;
-  right: 0;
-  margin: auto;
 }
 .fukidashiTtl h2 {
   margin-top: 30px;
@@ -204,6 +198,27 @@ header .header-logo {
   position: absolute;
 }
 .pinkDot-txt + p {
+  padding-left: 20px;
+}
+
+.blueDot-txt {
+  padding-left: 20px;
+  position: relative;
+  font-size: 18px;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+.blueDot-txt::before {
+  content: "";
+  background: var(--textBlue);
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  top: 5px;
+  left: 0px;
+  position: absolute;
+}
+.blueDot-txt + p {
   padding-left: 20px;
 }
 
@@ -408,13 +423,6 @@ header .header-logo {
   display: block;
 }
 
-.panel-content {
-  display: none;
-}
-.panel-content.show {
-  display: block;
-}
-
 .panel-heading-inner {
   padding: 70px 40px 140px;
   position: relative;
@@ -447,16 +455,6 @@ header .header-logo {
   border-radius: 30px;
   box-shadow: 20px 20px 20px 0px rgba(104, 82, 78, 0.1176470588);
   position: relative;
-}
-.panel-heading .description-block::before {
-  content: "";
-  background: url(../media/images/panel01_person01.png) no-repeat;
-  background-size: contain;
-  width: 240px;
-  height: 176px;
-  position: absolute;
-  top: -177px;
-  right: 50px;
 }
 .panel-heading .description-block .inner {
   display: flex;
@@ -491,26 +489,6 @@ header .header-logo {
   display: inline-block;
   position: relative;
 }
-.panel-heading .gridItem-block .ttl-wrap .inner::before {
-  content: "";
-  background: url(../media/images/txtDeco01.png) no-repeat;
-  background-size: contain;
-  width: 28px;
-  height: 33px;
-  top: 0;
-  left: -38px;
-  position: absolute;
-}
-.panel-heading .gridItem-block .ttl-wrap .inner::after {
-  content: "";
-  background: url(../media/images/txtDeco02.png) no-repeat;
-  background-size: contain;
-  width: 28px;
-  height: 33px;
-  top: 0;
-  right: -38px;
-  position: absolute;
-}
 .panel-heading .gridItem-block .gridItem-wrap {
   display: grid;
   max-width: 944px;
@@ -544,6 +522,22 @@ header .header-logo {
   width: calc(100% - 125px);
 }
 
+.panel01-content .fukidashiTtl .fukidashi, .commonContent-block .fukidashiTtl .fukidashi {
+  background-color: #FFCEC9;
+}
+.panel01-content .fukidashiTtl .fukidashi::before, .commonContent-block .fukidashiTtl .fukidashi::before {
+  content: "";
+  background: url(../media/images/ttl_fukidashi.png) no-repeat;
+  background-size: contain;
+  width: 32px;
+  height: 14px;
+  position: absolute;
+  bottom: -14px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
 .panel01-heading {
   background-color: #FFEFEC;
 }
@@ -567,6 +561,16 @@ header .header-logo {
   bottom: 0;
   right: 0;
 }
+.panel01-heading .description-block::before {
+  content: "";
+  background: url(../media/images/panel01_person01.png) no-repeat;
+  background-size: contain;
+  width: 240px;
+  height: 176px;
+  position: absolute;
+  top: -177px;
+  right: 50px;
+}
 .panel01-heading .panel-heading-inner::before {
   content: "";
   background: url(../media/images/panel01_bottombg.png) no-repeat;
@@ -575,6 +579,26 @@ header .header-logo {
   height: 96px;
   bottom: 0;
   left: 0;
+  position: absolute;
+}
+.panel01-heading .gridItem-block .ttl-wrap .inner::before {
+  content: "";
+  background: url(../media/images/txtDeco01.png) no-repeat;
+  background-size: contain;
+  width: 28px;
+  height: 33px;
+  top: 0;
+  left: -38px;
+  position: absolute;
+}
+.panel01-heading .gridItem-block .ttl-wrap .inner::after {
+  content: "";
+  background: url(../media/images/txtDeco02.png) no-repeat;
+  background-size: contain;
+  width: 28px;
+  height: 33px;
+  top: 0;
+  right: -38px;
   position: absolute;
 }
 .panel01-heading .gridItem-wrap {
@@ -724,6 +748,7 @@ header .header-logo {
 .recomend-block {
   background: #fff;
   box-shadow: 20px 20px 20px 0px rgba(104, 82, 78, 0.1176470588);
+  box-sizing: border-box;
   padding: 32px 50px 40px;
   max-width: 944px;
   margin: 0 auto;
@@ -753,6 +778,7 @@ header .header-logo {
 }
 .recomend-block ul li p {
   margin-bottom: 0px;
+  font-size: 16px;
 }
 .recomend-block ul li p::before {
   top: 10px;
@@ -1368,6 +1394,9 @@ small {
   h2 .strong {
     font-size: 32px;
   }
+  .dotsTxt {
+    padding-top: 0.1em;
+  }
   .dotBorder {
     width: 90%;
   }
@@ -1450,14 +1479,14 @@ small {
     margin-top: 63px;
   }
   .panel-heading .gridItem-block .ttl-wrap .inner::before {
-    top: auto;
+    top: auto !important;
     bottom: 0;
-    left: -25px;
+    left: -25px !important;
   }
   .panel-heading .gridItem-block .ttl-wrap .inner::after {
-    top: auto;
+    top: auto !important;
     bottom: 0;
-    right: -25px;
+    right: -25px !important;
   }
   .panel-heading .gridItem-block .gridItem-wrap {
     display: block;
@@ -1518,7 +1547,7 @@ small {
   }
   .recomend-block .ttl-area {
     width: 100%;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.3;
     padding: 5px;
     box-sizing: border-box;
@@ -1530,7 +1559,7 @@ small {
   .recomend-block ul li {
     width: 100%;
   }
-  .recomend-block ul li .pinkDot-txt {
+  .recomend-block ul li p {
     font-size: 16px;
   }
   .panel01-heading::before {

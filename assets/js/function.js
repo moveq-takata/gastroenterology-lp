@@ -1,14 +1,14 @@
 
 //タブ切り替えjs
-  $(function() {
-    let tabs = $(".tab-item");
-    $(".tab-item").on("click", function() {
-        $(".active").removeClass("active");
-        $(this).addClass("active");
-        const index = tabs.index(this);
-        $(".panel-content").removeClass("show").eq(index).addClass("show");
-    });
-});
+//   $(function() {
+//     let tabs = $(".tab-item");
+//     $(".tab-item").on("click", function() {
+//         $(".active").removeClass("active");
+//         $(this).addClass("active");
+//         const index = tabs.index(this);
+//         $(".panel-content").removeClass("show").eq(index).addClass("show");
+//     });
+// });
 
 // スクロールイベント
 $(window).on('scroll', function() {

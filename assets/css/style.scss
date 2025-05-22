@@ -41,11 +41,18 @@ img{
     }
 }
 .dotsTxt{
-    background-image: radial-gradient(circle at center, var(--textPink) 20%, transparent 20%);
+    
     background-position: top right;
     background-repeat: repeat-x;
     background-size: 1em 0.2em;
     padding-top: .2em;
+}
+.pinkDotsTxt{
+    background-image: radial-gradient(circle at center, var(--textPink) 20%, transparent 20%);
+
+}
+.blueDotsTxt{
+    background-image: radial-gradient(circle at center, var(--textBlue) 20%, transparent 20%);
 }
 
 .pinkTxt{
@@ -66,23 +73,9 @@ img{
 .fukidashiTtl{
     .fukidashi{
         font-size: 18px;
-        background-color: #FFCEC9;
         padding: 5px 20px;
         border-radius: 30px;
         position: relative;
-
-        &::before{
-            content: '';
-            background: url(../media/images/ttl_fukidashi.png) no-repeat;
-            background-size: contain;
-            width: 32px;
-            height: 14px;
-            position: absolute;
-            bottom: -14px;
-            left: 0;
-            right: 0;
-            margin: auto;
-        }
     }
     h2{
         margin-top: 30px;
@@ -205,6 +198,30 @@ header{
 
     }
 }
+.blueDot-txt{
+    padding-left: 20px;
+    position: relative;
+    font-size: 18px;
+    margin-bottom: 10px;
+    line-height: 1.3;
+
+    &::before{
+        content: "";
+        background: var(--textBlue);
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        top: 5px;
+        left: 0px;
+        position: absolute;
+    }
+
+    &+p{
+        padding-left: 20px;
+
+    }
+}
+
 //切り替えタブ
 .tab-item-wrap{
     max-width: 1120px;
@@ -441,14 +458,15 @@ header{
         }
     }
 }
-//切り替えコンテンツ
-.panel-content{
-    display: none;
 
-    &.show{
-        display: block;
-    }
-}
+//切り替えコンテンツ
+// .panel-content{
+//     display: none;
+
+//     &.show{
+//         display: block;
+//     }
+// }
 .panel-heading-inner{
     padding: 70px 40px 140px;
     position: relative;
@@ -484,17 +502,6 @@ header{
         border-radius: 30px;
         box-shadow: 20px 20px 20px 0px #68524e1e;
         position: relative;
-
-        &::before{
-            content: '';
-            background: url(../media/images/panel01_person01.png) no-repeat;
-            background-size: contain;
-            width: 240px;
-            height: 176px;
-            position: absolute;
-            top: -177px;
-            right: 50px;
-        }
 
         .inner{
             display: flex;
@@ -534,26 +541,6 @@ header{
                 display: inline-block;
                 position: relative;
 
-                &::before{
-                    content: '';
-                    background: url(../media/images/txtDeco01.png) no-repeat;
-                    background-size: contain;
-                    width: 28px;
-                    height: 33px;
-                    top: 0;
-                    left: -38px;
-                    position: absolute;
-                }
-                &::after{
-                    content: '';
-                    background: url(../media/images/txtDeco02.png) no-repeat;
-                    background-size: contain;
-                    width: 28px;
-                    height: 33px;
-                    top: 0;
-                    right: -38px;
-                    position: absolute;
-                }
             }
         }
 
@@ -593,6 +580,27 @@ header{
         }
     }
 }
+.panel01-content , .commonContent-block{
+    // ふきだしタイトル
+    .fukidashiTtl{
+        .fukidashi{
+            background-color: #FFCEC9;
+
+            &::before{
+                content: '';
+                background: url(../media/images/ttl_fukidashi.png) no-repeat;
+                background-size: contain;
+                width: 32px;
+                height: 14px;
+                position: absolute;
+                bottom: -14px;
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
+        }
+    }
+}
 
 .panel01-heading{
     background-color: #FFEFEC;
@@ -618,6 +626,19 @@ header{
         bottom: 0;
         right: 0;
     }
+    .description-block{
+        &::before{
+            content: '';
+            background: url(../media/images/panel01_person01.png) no-repeat;
+            background-size: contain;
+            width: 240px;
+            height: 176px;
+            position: absolute;
+            top: -177px;
+            right: 50px;
+        }
+
+    }
 
     .panel-heading-inner{
         &::before{
@@ -629,6 +650,32 @@ header{
             bottom: 0;
             left: 0;
             position: absolute;
+        }
+    }
+    .gridItem-block{
+        .ttl-wrap{
+            .inner{
+                &::before{
+                    content: '';
+                    background: url(../media/images/txtDeco01.png) no-repeat;
+                    background-size: contain;
+                    width: 28px;
+                    height: 33px;
+                    top: 0;
+                    left: -38px;
+                    position: absolute;
+                }
+                &::after{
+                    content: '';
+                    background: url(../media/images/txtDeco02.png) no-repeat;
+                    background-size: contain;
+                    width: 28px;
+                    height: 33px;
+                    top: 0;
+                    right: -38px;
+                    position: absolute;
+                }
+            }
         }
     }
 
@@ -820,6 +867,7 @@ header{
 .recomend-block{
     background: #fff;
     box-shadow: 20px 20px 20px 0px rgba(104, 82, 78, 0.1176470588);
+    box-sizing: border-box;
     padding: 32px 50px 40px;
     max-width: 944px;
     margin: 0 auto;
@@ -850,6 +898,7 @@ header{
 
             p{
                 margin-bottom: 0px;
+                font-size: 16px;
 
                 &::before{
                     top: 10px;
@@ -1572,6 +1621,9 @@ small {
             font-size: 32px;
         }
     }
+    .dotsTxt{
+        padding-top: .1em;
+    }
     .dotBorder{
         width: 90%;
     }
@@ -1677,14 +1729,14 @@ small {
             .ttl-wrap{
                 .inner{
                     &::before{
-                        top: auto;
+                        top: auto!important;
                         bottom: 0;
-                        left: -25px;
+                        left: -25px!important;
                     }
                     &::after{
-                        top: auto;
+                        top: auto!important;
                         bottom: 0;
-                        right: -25px;
+                        right: -25px!important;
                     }
 
                 }
@@ -1763,7 +1815,7 @@ small {
         padding: 32px 24px;
         .ttl-area{
             width: 100%;
-            font-size: 20px;
+            font-size: 16px;
             line-height: 1.3;
             padding: 5px;
             box-sizing: border-box;
@@ -1773,7 +1825,7 @@ small {
             flex-direction: column;
             li{
                 width: 100%;
-                .pinkDot-txt{
+                p{
                     font-size: 16px;
                 }
             }
