@@ -1,14 +1,41 @@
 
-//タブ切り替えjs
-//   $(function() {
-//     let tabs = $(".tab-item");
-//     $(".tab-item").on("click", function() {
-//         $(".active").removeClass("active");
-//         $(this).addClass("active");
-//         const index = tabs.index(this);
-//         $(".panel-content").removeClass("show").eq(index).addClass("show");
-//     });
-// });
+// タブ切り替えjs
+  $(function() {
+    let tabs = $(".tab-item");
+    
+    // タブクリック時の処理
+    $(".tab-item").on("click", function() {
+        $(".active").removeClass("active");
+        $(this).addClass("active");
+        const index = tabs.index(this);
+        $(".panel-content").removeClass("show").eq(index).addClass("show");
+    });
+
+    // フッターのページ内リンクをクリックした時の処理
+    $("[class*=panel][class*=-link]").on("click", function() {
+        // クリックされたリンクのクラス名からパネル番号を取得
+        const panelNum = $(this).attr('class').match(/panel(\d+)-link/)[1];
+        const index = parseInt(panelNum) - 1;
+        
+        // 対応するタブをアクティブにする
+        $(".active").removeClass("active");
+        tabs.eq(index).addClass("active");
+        
+        // 対応するパネルを表示する
+        $(".panel-content").removeClass("show");
+        $(".panel-content").eq(index).addClass("show");
+        
+        // リンク先要素の位置を取得してスクロール
+        const targetId = $(this).attr('href');
+        if(targetId) {
+            const position = $(targetId).offset().top - 80; // 遷移先の100px上に移動するよう調整
+            $('html, body').animate({
+                scrollTop: position
+            }, 400);
+        }
+        return false;
+    });
+});
 
 // スクロールイベント
 $(window).on('scroll', function() {
